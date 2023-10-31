@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1100.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.project.controller.DashBoardLoaderFormController">
+   <children>
+      <Pane layoutX="-2.0" layoutY="14.0" prefHeight="59.0" prefWidth="1100.0" style="-fx-background-color: #152238;">
+         <children>
+            <Label fx:id="lblDate" layoutX="706.0" layoutY="1.0" prefHeight="58.0" prefWidth="135.0" text="05/03/2023" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblTime" layoutX="882.0" layoutY="1.0" prefHeight="58.0" prefWidth="112.0" text="04.50 am" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="imgUser" fitHeight="40.0" fitWidth="40.0" layoutX="1022.0" layoutY="10.0" onMouseClicked="#userControlOnMouseClick" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assert/img/icons8-male-user-100.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="16.0" layoutY="97.0" prefHeight="241.0" prefWidth="255.0" style="-fx-background-color: #152238;">
+         <children>
+            <Label layoutX="96.0" layoutY="39.0" prefHeight="35.0" prefWidth="187.0" text="Order count" textFill="#635985">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="59.0" fitWidth="60.0" layoutX="26.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assert/img/icons8-purchase-order-96.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="lblOrderCount" layoutX="109.0" layoutY="97.0" prefHeight="110.0" prefWidth="135.0" textFill="WHITE">
+               <font>
+                  <Font size="42.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="287.0" layoutY="98.0" prefHeight="241.0" prefWidth="255.0" style="-fx-background-color: #152238;">
+         <children>
+            <Label layoutX="80.0" layoutY="39.0" prefHeight="35.0" prefWidth="187.0" text="Total Customer" textFill="#635985">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="59.0" fitWidth="60.0" layoutX="15.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assert/img/icons8-money-bag-96.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="lblCustomerCount" layoutX="106.0" layoutY="100.0" prefHeight="110.0" prefWidth="135.0" textFill="WHITE">
+               <font>
+                  <Font size="42.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="556.0" layoutY="98.0" prefHeight="241.0" prefWidth="255.0" style="-fx-background-color: #152238;">
+         <children>
+            <Label fx:id="lblTodaySales" alignment="CENTER" layoutX="12.0" layoutY="100.0" prefHeight="110.0" prefWidth="227.0" textFill="WHITE">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+            <Label layoutX="96.0" layoutY="39.0" prefHeight="35.0" prefWidth="187.0" text="Today sales" textFill="#635985">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="59.0" fitWidth="60.0" layoutX="26.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assert/img/icons8-combo-chart-96.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="176.0" layoutY="369.0" prefHeight="417.0" prefWidth="711.0" style="-fx-background-color: #152238;">
+         <children>
+            <BarChart fx:id="barGraph" layoutX="25.0" layoutY="109.0" prefHeight="298.0" prefWidth="652.0" stylesheets="@assert/styles/barChart.css">
+               <xAxis>
+                  <CategoryAxis side="BOTTOM" />
+               </xAxis>
+               <yAxis>
+                  <NumberAxis side="LEFT" />
+               </yAxis>
+            </BarChart>
+            <Label layoutX="45.0" layoutY="14.0" prefHeight="21.0" prefWidth="227.0" text="Customer Report" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="826.0" layoutY="98.0" prefHeight="241.0" prefWidth="255.0" style="-fx-background-color: #152238;">
+         <children>
+            <Label layoutX="96.0" layoutY="39.0" prefHeight="35.0" prefWidth="187.0" text="Total sales" textFill="#635985">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="59.0" fitWidth="60.0" layoutX="26.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assert/img/icons8-total-sales-96.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="lblTotalSales" alignment="CENTER" layoutX="14.0" layoutY="99.0" prefHeight="110.0" prefWidth="227.0" textFill="WHITE">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

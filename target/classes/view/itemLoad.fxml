@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1100.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.project.controller.ItemLoadController">
+   <children>
+      <ImageView fitHeight="111.0" fitWidth="114.0" layoutX="33.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assert/img/pic.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="344.0" layoutY="66.0" prefHeight="59.0" prefWidth="451.0" text="Add new Load to Store" textFill="#f20c0c">
+         <font>
+            <Font name="System Bold" size="39.0" />
+         </font>
+      </Label>
+      <Label layoutX="130.0" layoutY="127.0" prefHeight="34.0" prefWidth="149.0" text="load Number*" textFill="WHITE">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <Pane layoutX="130.0" layoutY="164.0" prefHeight="59.0" prefWidth="254.0" style="-fx-background-color: #152238;">
+         <effect>
+            <DropShadow color="#ebe7e7" />
+         </effect>
+         <children>
+            <JFXTextField fx:id="txtLoadId" editable="false" layoutX="6.0" layoutY="14.0" opacity="0.75" prefHeight="42.0" prefWidth="243.0" style="-fx-prompt-text-fill: white; -fx-text-fill: white;">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </JFXTextField>
+         </children>
+      </Pane>
+      <Label layoutX="781.0" layoutY="127.0" prefHeight="34.0" prefWidth="124.0" text="Item Code*" textFill="WHITE">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <Pane layoutX="130.0" layoutY="270.0" prefHeight="59.0" prefWidth="325.0" style="-fx-background-color: #152238;">
+         <effect>
+            <DropShadow color="#ebe7e7" />
+         </effect>
+         <children>
+            <JFXTextField fx:id="txtItemName" editable="false" layoutX="7.0" layoutY="7.0" opacity="0.75" prefHeight="42.0" prefWidth="314.0" style="-fx-prompt-text-fill: white; -fx-text-fill: white;">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </JFXTextField>
+         </children>
+      </Pane>
+      <TableView fx:id="tblload" layoutX="205.0" layoutY="565.0" prefHeight="130.0" prefWidth="776.0" style="-fx-background-color: #152238;">
+         <columns>
+            <TableColumn fx:id="colItemid" prefWidth="202.0" text="Item Id" />
+            <TableColumn fx:id="colQty" prefWidth="201.0" text="Qty" />
+            <TableColumn fx:id="colPrice" prefWidth="210.0" text="Price" />
+            <TableColumn fx:id="colAction" prefWidth="162.0" text="Action" />
+         </columns>
+         <effect>
+            <DropShadow color="#ebe7e7" />
+         </effect>
+      </TableView>
+      <Label layoutX="130.0" layoutY="345.0" prefHeight="34.0" prefWidth="270.0" text="Total*" textFill="WHITE">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <Pane layoutX="130.0" layoutY="379.0" prefHeight="59.0" prefWidth="325.0" style="-fx-background-color: #152238;">
+         <effect>
+            <DropShadow color="#ebe7e7" />
+         </effect>
+         <children>
+            <JFXTextField fx:id="txtTotal" editable="false" layoutX="10.0" layoutY="9.0" opacity="0.75" prefHeight="42.0" prefWidth="305.0" style="-fx-prompt-text-fill: white; -fx-text-fill: white;">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </JFXTextField>
+         </children>
+      </Pane>
+      <Label layoutX="130.0" layoutY="448.0" prefHeight="34.0" prefWidth="270.0" text="Payment Status*" textFill="WHITE">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <Pane layoutX="130.0" layoutY="482.0" prefHeight="59.0" prefWidth="325.0" style="-fx-background-color: #152238;">
+         <effect>
+            <DropShadow color="#ebe7e7" />
+         </effect>
+         <children>
+            <JFXComboBox fx:id="cmbStatus" layoutX="6.0" layoutY="9.0" prefHeight="42.0" prefWidth="314.0" stylesheets="@assert/styles/CustomerFormStyle.css" />
+         </children>
+      </Pane>
+      <Label layoutX="135.0" layoutY="224.0" prefHeight="34.0" prefWidth="207.0" text="Item Name*" textFill="WHITE">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <Pane layoutX="763.0" layoutY="164.0" prefHeight="59.0" prefWidth="243.0" style="-fx-background-color: #152238;">
+         <effect>
+            <DropShadow color="#ebe7e7" />
+         </effect>
+         <children>
+            <JFXTextField fx:id="txtItemId" layoutX="7.0" layoutY="9.0" onAction="#searchItemOnAction" onKeyReleased="#txtItemCodeOnKeyReleased" opacity="0.75" prefHeight="42.0" prefWidth="230.0" style="-fx-prompt-text-fill: white; -fx-text-fill: white;">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </JFXTextField>
+         </children>
+      </Pane>
+      <Label layoutX="681.0" layoutY="237.0" prefHeight="34.0" prefWidth="207.0" text="Price*" textFill="WHITE">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <Pane layoutX="681.0" layoutY="271.0" prefHeight="59.0" prefWidth="325.0" style="-fx-background-color: #152238;">
+         <children>
+            <JFXTextField fx:id="txtPrice" editable="false" layoutX="11.0" layoutY="9.0" opacity="0.75" prefHeight="42.0" prefWidth="305.0" style="-fx-prompt-text-fill: white; -fx-text-fill: white;">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </JFXTextField>
+         </children>
+         <effect>
+            <DropShadow color="#ebe7e7" />
+         </effect>
+      </Pane>
+      <Label layoutX="681.0" layoutY="342.0" prefHeight="34.0" prefWidth="207.0" text="Qty*" textFill="WHITE">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <Pane layoutX="681.0" layoutY="376.0" prefHeight="59.0" prefWidth="325.0" style="-fx-background-color: #152238;">
+         <children>
+            <JFXTextField fx:id="txtQty" layoutX="11.0" layoutY="9.0" onAction="#txtQtyOnAction" onKeyReleased="#txtQtyOnKeyReleased" opacity="0.75" prefHeight="42.0" prefWidth="305.0" style="-fx-prompt-text-fill: white; -fx-text-fill: white;">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </JFXTextField>
+         </children>
+         <effect>
+            <DropShadow color="#ebe7e7" />
+         </effect>
+      </Pane>
+      <Label layoutX="681.0" layoutY="445.0" prefHeight="34.0" prefWidth="207.0" text="Invoice Number*" textFill="WHITE">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <Pane layoutX="681.0" layoutY="479.0" prefHeight="59.0" prefWidth="220.0" style="-fx-background-color: #152238;">
+         <children>
+            <JFXTextField fx:id="txtInvoice" layoutX="7.0" layoutY="13.0" opacity="0.75" prefHeight="42.0" prefWidth="207.0" style="-fx-prompt-text-fill: white; -fx-text-fill: white;">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </JFXTextField>
+         </children>
+         <effect>
+            <DropShadow color="#ebe7e7" />
+         </effect>
+      </Pane>
+      <JFXButton fx:id="btnLoadItem" layoutX="824.0" layoutY="731.0" onAction="#LoadItemOnAction" prefHeight="51.0" prefWidth="220.0" style="-fx-background-color: blue; -fx-background-radius: 25;" text="Load to Store" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnAdd" layoutX="913.0" layoutY="483.0" onAction="#AddToLoadOnAction" prefHeight="40.0" prefWidth="110.0" style="-fx-background-color: red mat; -fx-background-radius: 25;" text="Add" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="446.0" layoutY="127.0" prefHeight="34.0" prefWidth="124.0" text="Supplier*" textFill="WHITE">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <Pane layoutX="411.0" layoutY="164.0" onKeyReleased="#txtSupplieronKeyReleased" prefHeight="59.0" prefWidth="325.0" style="-fx-background-color: #152238;">
+         <effect>
+            <DropShadow color="#ebe7e7" />
+         </effect>
+         <children>
+            <JFXTextField fx:id="txtSupplier" layoutX="10.0" layoutY="9.0" onKeyReleased="#txtSupplieronKeyReleased" opacity="0.75" prefHeight="42.0" prefWidth="305.0" style="-fx-prompt-text-fill: white; -fx-text-fill: white;">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </JFXTextField>
+         </children>
+      </Pane>
+      <Label fx:id="lbldate" alignment="CENTER" layoutX="861.0" layoutY="28.0" prefHeight="51.0" prefWidth="193.0" text="2023/04/22" textFill="#ddcccc">
+         <font>
+            <Font name="System Bold" size="29.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

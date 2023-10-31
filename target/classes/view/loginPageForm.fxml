@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="800.0" prefWidth="1520.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.project.controller.LoginPageFormController">
+   <children>
+      <ImageView blendMode="DARKEN" fitHeight="800.0" fitWidth="1520.0" pickOnBounds="true">
+         <image>
+            <Image url="@assert/img/Screenshot%202023-03-25%20094109.png" />
+         </image>
+         <effect>
+            <Lighting bumpInput="$null" diffuseConstant="0.76" specularConstant="0.54">
+               <light>
+<!--                  <Light.Distant />-->
+               </light>
+            </Lighting>
+         </effect>
+      </ImageView>
+      <JFXButton fx:id="loginBtn" layoutX="593.0" layoutY="653.0" onAction="#loginBtnOnAction" prefHeight="59.0" prefWidth="452.0" style="-fx-background-color: red mat; -fx-background-radius: 25;" text="Login" textFill="#f5f5f5">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </JFXButton>
+      <Pane layoutX="111.0" layoutY="82.0" prefHeight="99.0" prefWidth="100.0">
+         <children>
+            <ImageView fitHeight="111.0" fitWidth="114.0" layoutX="-7.0" layoutY="-6.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assert/img/pic.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Label layoutX="249.0" layoutY="102.0" prefHeight="59.0" prefWidth="294.0" text="Lead Asia" textFill="#f20c0c">
+         <font>
+            <Font name="System Bold" size="39.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#f0f1f2" height="59.0" layoutX="585.0" layoutY="408.0" opacity="0.28" stroke="BLACK" strokeType="INSIDE" width="452.0" />
+      <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#f0f1f2" height="59.0" layoutX="593.0" layoutY="530.0" opacity="0.28" stroke="BLACK" strokeType="INSIDE" width="452.0" />
+      <ImageView fitHeight="31.0" fitWidth="31.0" layoutX="605.0" layoutY="422.0" pickOnBounds="true" preserveRatio="true" style="-fx-background-color: white;">
+         <image>
+            <Image url="@assert/img/icons8-account-48.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="31.0" fitWidth="33.0" layoutX="605.0" layoutY="544.0" pickOnBounds="true" preserveRatio="true" style="-fx-background-color: white;">
+         <image>
+            <Image url="@assert/img/icons8-lock-30.png" />
+         </image>
+      </ImageView>
+      <JFXTextField fx:id="txtUsername" layoutX="643.0" layoutY="413.0" onAction="#txtUserNameOnAction" opacity="0.75" prefHeight="29.0" prefWidth="325.0" promptText="Username" style="-fx-prompt-text-fill: white; -fx-text-fill: white;" unFocusColor="WHITE">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </JFXTextField>
+      <JFXPasswordField fx:id="psPassword" layoutX="643.0" layoutY="535.0" onAction="#psPasswordOnAction" prefHeight="30.0" prefWidth="325.0" promptText="Password" style="-fx-prompt-text-fill: white; -fx-text-fill: white;">
+         <font>
+            <Font size="23.0" />
+         </font></JFXPasswordField>
+      <JFXTextField fx:id="txtid" layoutX="643.0" layoutY="535.0" prefHeight="30.0" prefWidth="325.0" style="-fx-text-fill: white;" unFocusColor="WHITE">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </JFXTextField>
+      <ImageView fx:id="imgShow" fitHeight="31.0" fitWidth="31.0" layoutX="989.0" layoutY="544.0" onMouseClicked="#ShowPasswordOnMouseClicked" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assert/img/icons8-eye-60.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgHide" fitHeight="31.0" fitWidth="31.0" layoutX="989.0" layoutY="544.0" onMouseClicked="#HidePAsssowrdOnMouseClicked" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assert/img/icons8-hide-60%20(1).png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

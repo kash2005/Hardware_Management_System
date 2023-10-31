@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1100.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.project.controller.ItemFormController">
+   <children>
+      <ImageView fitHeight="111.0" fitWidth="114.0" layoutX="8.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assert/img/pic.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="457.0" layoutY="23.0" prefHeight="59.0" prefWidth="294.0" text="Item Form" textFill="#f20c0c">
+         <font>
+            <Font name="System Bold" size="39.0" />
+         </font>
+      </Label>
+      <Label layoutX="660.0" layoutY="107.0" prefHeight="34.0" prefWidth="207.0" text="Item Name*" textFill="WHITE">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <Pane layoutX="660.0" layoutY="141.0" prefHeight="59.0" prefWidth="325.0" style="-fx-background-color: #152238;">
+         <children>
+            <JFXTextField fx:id="txtName" layoutX="11.0" layoutY="9.0" onKeyReleased="#txtNameOnKeyReleased" opacity="0.75" prefHeight="42.0" prefWidth="310.0" style="-fx-prompt-text-fill: white; -fx-text-fill: white;">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </JFXTextField>
+         </children>
+         <effect>
+            <DropShadow color="#ebe7e7" />
+         </effect>
+      </Pane>
+      <Label layoutX="660.0" layoutY="211.0" prefHeight="34.0" prefWidth="207.0" text="Item Quantity*" textFill="WHITE">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <Pane layoutX="660.0" layoutY="245.0" prefHeight="59.0" prefWidth="325.0" style="-fx-background-color: #152238;">
+         <children>
+            <JFXTextField fx:id="txtQty" layoutX="11.0" layoutY="9.0" onKeyReleased="#txtQtyOnKeyReleased" opacity="0.75" prefHeight="42.0" prefWidth="300.0" style="-fx-prompt-text-fill: white; -fx-text-fill: white;">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </JFXTextField>
+         </children>
+         <effect>
+            <DropShadow color="#ebe7e7" />
+         </effect>
+      </Pane>
+      <TableView fx:id="tblItem" layoutX="113.0" layoutY="498.0" onMouseClicked="#tblItemOnMouseClicked" prefHeight="206.0" prefWidth="900.0" style="-fx-background-color: #152238;">
+         <columns>
+            <TableColumn fx:id="colId" prefWidth="100.0" text="Code" />
+            <TableColumn fx:id="colName" prefWidth="176.0" text="Name" />
+            <TableColumn fx:id="colPrice" prefWidth="196.0" text="Price" />
+            <TableColumn fx:id="ColQty" prefWidth="201.0" text="Quantity" />
+            <TableColumn fx:id="ColType" prefWidth="224.0" text="Type" />
+         </columns>
+         <effect>
+            <DropShadow color="#ebe7e7" />
+         </effect>
+      </TableView>
+      <Label layoutX="660.0" layoutY="310.0" prefHeight="34.0" prefWidth="207.0" text="Item Sell*" textFill="WHITE">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <Pane layoutX="660.0" layoutY="344.0" prefHeight="59.0" prefWidth="325.0" style="-fx-background-color: #152238;">
+         <children>
+            <JFXTextField fx:id="txtSellPrice" layoutX="11.0" layoutY="9.0" onKeyReleased="#txtSellPriceOnKeyReleased" opacity="0.75" prefHeight="42.0" prefWidth="310.0" style="-fx-prompt-text-fill: white; -fx-text-fill: white;">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </JFXTextField>
+         </children>
+         <effect>
+            <DropShadow color="#ebe7e7" />
+         </effect>
+      </Pane>
+      <Label layoutX="114.0" layoutY="94.0" prefHeight="34.0" prefWidth="149.0" text="Item Code*" textFill="WHITE">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <Pane layoutX="114.0" layoutY="131.0" prefHeight="59.0" prefWidth="325.0" style="-fx-background-color: #152238;">
+         <children>
+            <JFXTextField fx:id="txtCode" layoutX="11.0" layoutY="9.0" onAction="#txtCodeOnAction" opacity="0.75" prefHeight="42.0" prefWidth="300.0" style="-fx-prompt-text-fill: white; -fx-text-fill: white;">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </JFXTextField>
+         </children>
+         <effect>
+            <DropShadow color="#ebe7e7" />
+         </effect>
+      </Pane>
+      <Label layoutX="113.0" layoutY="201.0" prefHeight="34.0" prefWidth="207.0" text="Item Type*" textFill="WHITE">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <Pane layoutX="114.0" layoutY="235.0" prefHeight="59.0" prefWidth="325.0" style="-fx-background-color: #152238;">
+         <children>
+            <JFXTextField fx:id="txtType" layoutX="11.0" layoutY="9.0" onKeyReleased="#txtTypeOnLeyReleased" opacity="0.75" prefHeight="42.0" prefWidth="310.0" style="-fx-prompt-text-fill: white; -fx-text-fill: white;">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </JFXTextField>
+         </children>
+         <effect>
+            <DropShadow color="#ebe7e7" />
+         </effect>
+      </Pane>
+      <Label layoutX="114.0" layoutY="310.0" prefHeight="34.0" prefWidth="270.0" text="Get Price*" textFill="WHITE">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <Pane layoutX="114.0" layoutY="344.0" prefHeight="59.0" prefWidth="325.0" style="-fx-background-color: #152238;">
+         <children>
+            <JFXTextField fx:id="txtGetPrice" layoutX="11.0" layoutY="9.0" onKeyReleased="#txtGetPriceOnKeyReleased" opacity="0.75" prefHeight="42.0" prefWidth="310.0" style="-fx-prompt-text-fill: white; -fx-text-fill: white;">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </JFXTextField>
+         </children>
+         <effect>
+            <DropShadow color="#ebe7e7" />
+         </effect>
+      </Pane>
+      <JFXButton fx:id="btnNew" layoutX="456.0" layoutY="135.0" onAction="#NewItemIdOnAction" prefHeight="51.0" prefWidth="85.0" style="-fx-background-color: gray; -fx-background-radius: 25;" text="New" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </JFXButton>
+      <HBox layoutX="527.0" layoutY="432.0" prefHeight="59.0" prefWidth="491.0" spacing="10.0">
+         <children>
+            <JFXButton fx:id="btnClear" onAction="#btnClearOnAction" prefHeight="40.0" prefWidth="110.0" style="-fx-background-color: orange; -fx-background-radius: 25;" text="Clear" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnDelete" onAction="#btnDeleteOnAction" prefHeight="40.0" prefWidth="110.0" style="-fx-background-color: red mat; -fx-background-radius: 25;" text="Delete" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnUpdate" onAction="#btnUpdateOnAction" prefHeight="51.0" prefWidth="119.0" style="-fx-background-color: blue; -fx-background-radius: 25;" text="Update" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnsave" onAction="#btnsaveOnAction" prefHeight="40.0" prefWidth="110.0" style="-fx-background-color: green; -fx-background-radius: 25;" text="Save" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </HBox>
+      <JFXButton fx:id="btnNewLoad" layoutX="789.0" layoutY="722.0" onAction="#newLoadFrameOnAction" prefHeight="51.0" prefWidth="207.0" style="-fx-background-color: #576CBC; -fx-background-radius: 25;" text="New Item Load" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

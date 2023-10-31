@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1100.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.project.controller.SupplierFormController">
+   <children>
+      <TableView fx:id="tblSupplier" layoutX="69.0" layoutY="444.0" prefHeight="252.0" prefWidth="931.0" style="-fx-background-color: #152238;">
+         <columns>
+            <TableColumn fx:id="colSupId" prefWidth="152.66665649414062" text="Id" />
+            <TableColumn fx:id="colSupName" prefWidth="256.33331298828125" text="Name" />
+            <TableColumn fx:id="colSupContactNo" prefWidth="238.33331298828125" text="ContactNo" />
+            <TableColumn fx:id="colSupCompany" prefWidth="281.0" text="Company" />
+         </columns>
+         <effect>
+            <DropShadow color="#ebe7e7" />
+         </effect>
+      </TableView>
+      <JFXButton layoutX="633.0" layoutY="374.0" onAction="#deleteBtnOnAction" prefHeight="30.0" prefWidth="110.0" style="-fx-background-color: red mat; -fx-background-radius: 25;" text="Delete" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="507.0" layoutY="372.0" onAction="#clearBtnOnAction" prefHeight="30.0" prefWidth="110.0" style="-fx-background-color: orange; -fx-background-radius: 25;" text="Clear" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="885.0" layoutY="373.0" onAction="#saveBtnOnAction" prefHeight="30.0" prefWidth="110.0" style="-fx-background-color: green; -fx-background-radius: 25;" text="Save" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="758.0" layoutY="375.0" onAction="#updateBtnOnAction" prefHeight="30.0" prefWidth="119.0" style="-fx-background-color: blue; -fx-background-radius: 25;" text="Update" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="111.0" fitWidth="114.0" layoutX="21.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assert/img/pic.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="390.0" layoutY="46.0" prefHeight="59.0" prefWidth="294.0" text="Supplier Form" textFill="#f20c0c">
+         <font>
+            <Font name="System Bold" size="39.0" />
+         </font>
+      </Label>
+      <Pane layoutX="638.0" layoutY="291.0" prefHeight="59.0" prefWidth="325.0" style="-fx-background-color: #152238;">
+         <children>
+            <JFXTextField fx:id="txtSupCompany" layoutX="11.0" layoutY="9.0" onKeyReleased="#txtSupCompanyOnKeyReleased" opacity="0.75" prefHeight="42.0" prefWidth="309.0" style="-fx-prompt-text-fill: white; -fx-text-fill: white;">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </JFXTextField>
+         </children>
+         <effect>
+            <DropShadow color="#ebe7e7" />
+         </effect>
+      </Pane>
+      <Pane layoutX="640.0" layoutY="188.0" prefHeight="59.0" prefWidth="325.0" style="-fx-background-color: #152238;">
+         <children>
+            <JFXTextField fx:id="txtSupName" layoutX="11.0" layoutY="9.0" onKeyReleased="#txtSupNameOnKeyReleased" opacity="0.75" prefHeight="42.0" prefWidth="310.0" style="-fx-prompt-text-fill: white; -fx-text-fill: white;">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </JFXTextField>
+         </children>
+         <effect>
+            <DropShadow color="#ebe7e7" />
+         </effect>
+      </Pane>
+      <Label layoutX="638.0" layoutY="154.0" prefHeight="34.0" prefWidth="207.0" text="Supplier Name*" textFill="WHITE">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <Label layoutX="636.0" layoutY="257.0" prefHeight="34.0" prefWidth="254.0" text="Supplier company*" textFill="WHITE">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <Pane layoutX="89.0" layoutY="178.0" prefHeight="59.0" prefWidth="325.0" style="-fx-background-color: #152238;">
+         <children>
+            <JFXTextField fx:id="txtSupId" layoutX="11.0" layoutY="9.0" onAction="#searchOnAction" onKeyReleased="#txtSupIdOnKeyReleased" opacity="0.75" prefHeight="42.0" prefWidth="310.0" style="-fx-prompt-text-fill: white; -fx-text-fill: white;">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </JFXTextField>
+         </children>
+         <effect>
+            <DropShadow color="#ebe7e7" />
+         </effect>
+      </Pane>
+      <Pane layoutX="89.0" layoutY="291.0" prefHeight="59.0" prefWidth="325.0" style="-fx-background-color: #152238;">
+         <children>
+            <JFXTextField fx:id="txtSupContactNo" layoutX="11.0" layoutY="9.0" onKeyReleased="#txtSupContactNoOnKeyReleased" opacity="0.75" prefHeight="42.0" prefWidth="306.0" style="-fx-prompt-text-fill: white; -fx-text-fill: white;">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </JFXTextField>
+         </children>
+         <effect>
+            <DropShadow color="#ebe7e7" />
+         </effect>
+      </Pane>
+      <Label layoutX="91.0" layoutY="141.0" prefHeight="34.0" prefWidth="149.0" text="Supplier Id*" textFill="WHITE">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <Label layoutX="92.0" layoutY="257.0" prefHeight="34.0" prefWidth="242.0" text="Supplier Contact No*" textFill="WHITE">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <JFXButton layoutX="899.0" layoutY="716.0" onAction="#reportBtnOnAction" prefHeight="51.0" prefWidth="119.0" style="-fx-background-color: gray; -fx-background-radius: 25;" text="Report" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>
